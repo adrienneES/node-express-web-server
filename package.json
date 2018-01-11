@@ -1,0 +1,24 @@
+{
+  "name": "sample-node-express-web-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Adri Skrtic <adri.curtis@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-inject": "1.5.0",
+    "gulp-jscs": "~2.0.0",
+    "gulp-jshint": "~1.11.2",
+    "gulp-nodemon": "2.0.4",
+    "jshint-stylish": "~2.0.1",
+    "wiredep": "2.2.2"
+  }
+}
