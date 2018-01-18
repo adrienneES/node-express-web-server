@@ -27,8 +27,10 @@ var nav = [
 ];
 var authorRouter = require('./src/routes/authorRoutes')(nav);
 var bookRouter = require('./src/routes/bookRoutes')(nav);
+var adminRouter = require('./src/routes/adminRoutes')(nav);
 
 app.use('/Books', bookRouter);
+app.use('/Admin', adminRouter);
 app.use('/Authors', authorRouter);
 
 app.get('/', function(req, res) {
