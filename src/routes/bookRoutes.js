@@ -5,6 +5,15 @@ var objectId = require('mongodb').ObjectID;
 var bookRouter = express.Router();
 var router = function(nav) {
 
+    bookRouter.use(function (req, res, next) {
+        // this middleware to authenticate entire route
+        //  is excepting, but instructors did as well.
+        // leaving in through entirety of course
+        if (!req.user) {
+            res.redirect('/');
+        }
+        next();
+    });
     bookRouter.route('/').get(function(req, res) {
         var url = 'mongodb://localhost:27017/libraryApp';
         mongodb.connect(url, function(err, db) {
