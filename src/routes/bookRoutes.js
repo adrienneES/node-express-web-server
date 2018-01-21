@@ -6,7 +6,7 @@ var bookRouter = express.Router();
 var router = function(nav) {
 
     bookRouter.route('/').get(function(req, res) {
-        var url = 'mongodb://localhost:27017/libraryApp4';
+        var url = 'mongodb://localhost:27017/libraryApp';
         mongodb.connect(url, function(err, db) {
             var collection = db.collection('books');
             collection.find({}).toArray(
@@ -35,7 +35,7 @@ var router = function(nav) {
     bookRouter.route('/:id')
     .get(function(req, res) {
         var id = new objectId(req.params.id);
-        var url = 'mongodb://localhost:27017/libraryApp4';
+        var url = 'mongodb://localhost:27017/libraryApp';
         mongodb.connect(url, function(err, db) {
             var collection = db.collection('books');
             collection.findOne({_id: id},
