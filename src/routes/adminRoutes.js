@@ -4,19 +4,21 @@ var adminRouter = express.Router();
 var router = function(nav) {
     var books = [
         {
-              title: 'Milo',
+              title: 'War and Peace',
+              id: 656,
               genre: 'Historical Fiction',
               author: 'Lev Nikolayevich Tolstoy',
               read: false
           },
     {
-          title: 'Alex',
+          title: 'Les Mes',
+          id: 24280,
           genre: 'Historical Fiction',
           author: 'Victor Hugo',
           read: false
       },
     {
-          title: 'Callie',
+          title: 'War of the Worlds',
           genre: 'Science Fiction',
           author: 'H. G. Wells',
           read: false
