@@ -5,32 +5,49 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start-old": "node app.js",
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel open:src",
+    "open:src": "babel-node buildScripts/srcServer.js 3000",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000 --subdomain adri",
+    "share": "npm-run-all --parallel open:src localtunnel"
   },
   "author": "Adri Skrtic <adri.curtis@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.14.2",
-    "cookie-parser": "1.4.0",
     "ejs": "~2.3.4",
-    "express": "4.13.3",
-    "express-session": "1.12.0",
+    "express": "4.14.0",
+    "express-session": "1.15.6",
     "http": "0.0.0",
-    "jade": "1.11.0",
     "mongodb": "2.0.46",
     "mssql": "2.3.1",
+    "open": "0.0.5",
     "passport": "0.3.0",
     "passport-local": "1.0.0",
     "request": "^2.83.0",
     "xml2js": "0.4.15"
   },
   "devDependencies": {
+    "chalk": "2.3.0",
     "gulp": "~3.9.1",
     "gulp-inject": "1.5.0",
     "gulp-jscs": "~2.0.0",
     "gulp-jshint": "~1.11.2",
     "gulp-nodemon": "2.0.4",
     "jshint-stylish": "~2.0.1",
-    "wiredep": "2.2.2"
+    "npm-run-all": "4.1.2",
+    "wiredep": "2.2.2",
+    "babel-cli" : "6.14.0",
+    "babel-core" : "6.14.0",
+    "babel-loader" : "6.2.5",
+    "babel-preset-latest" : "6.14.0",
+    "babel-register" : "6.14.0",
+    "numeral": "1.5.3",
+    "webpack": "1.13.2",
+    "webpack-dev-middleware": "1.8.4",
+    "webpack-hot-middleware": "2.13.0",
+    "webpack-md5-hash": "0.0.5"
   }
 }
