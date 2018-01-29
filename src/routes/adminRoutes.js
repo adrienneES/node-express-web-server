@@ -1,5 +1,8 @@
 import express from 'express';
 import mongo from 'mongodb';
+
+/* eslint-disable no-console */
+
 const mongodb = mongo.MongoClient;
 const adminRouter = express.Router();
 const router = function(nav) {

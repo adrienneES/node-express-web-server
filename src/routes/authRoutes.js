@@ -2,6 +2,9 @@ var express = require('express');
 var authRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
 var passport = require('passport');
+
+/* eslint-disable no-console */
+
 var router = function () {
     authRouter.route('/signUp')
         .post(function (req, res) {

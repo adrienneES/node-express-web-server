@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 var passport = require('passport'),
     Localstrategy = require('passport-local').Strategy,
     mongodb = require('mongodb').MongoClient;

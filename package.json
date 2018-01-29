@@ -12,7 +12,8 @@
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000 --subdomain adri",
     "share": "npm-run-all --parallel open:src localtunnel",
-    "lint": "esw webpack.config.* src buildScripts"
+    "lint": "esw webpack.config.* src buildScripts",
+    "lint:watch": "npm run lint -- --watch"
   },
   "author": "Adri Skrtic <adri.curtis@gmail.com>",
   "license": "ISC",

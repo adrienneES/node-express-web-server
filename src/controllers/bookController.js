@@ -1,5 +1,6 @@
 var mongodb = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
+/* eslint-disable no-console */
 /*
 good reads key:
 key: 9vMBlKDe66FtVpVjKnIg

@@ -1,11 +1,11 @@
 import express from 'express';
 import bodyParser  from 'body-parser';
-//import passport from 'passport';
 import session from 'express-session';
-//import path from 'path';
 import open from 'open';
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
+
+/* eslint-disable no-console */
 
 const port = process.argv[2] || 5000;
 const app = express();
