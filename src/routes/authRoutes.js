@@ -8,16 +8,19 @@ var router = function () {
             console.log(req.body);
             var url = 'mongodb://localhost:27017/libraryApp';
             mongodb.connect(url, function(err, db) {
-                var collection = db.collection('users');
-                var user = {username: req.body.userName, password: req.body.password};
+              if (!db) {
+                console.log('no db');
+              }
+              //var collection = db.collection('users');
+              //var user = {username: req.body.userName, password: req.body.password};
                 // normally do a select to see if user exists before inserting, but for
                 //brevity, just insert
                 res.redirect('/auth/profile');
-//                collection.insert(user, function(err, results) {
-                    req.login(results.ops[0], function () {
+                //collection.insert(user, function(err, results) {
+                  //req.login(results.ops[0], function () {
                         res.redirect('/auth/profile');
-                    });
-        ///        });
+                  //});
+                  //});
             });
         });
     authRouter.route('/signIn')

@@ -1,9 +1,6 @@
-var express = require('express');
+import express from 'express';
 var bookRouter = express.Router();
-var sql = require('mssql');
-var mongodb = require('mongodb').MongoClient;
-var objectId = require('mongodb').ObjectID;
-
+//var sql = require('mssql');
 var router = function(nav) {
     var bookService = require('../services/goodreadService')();
     var bookController = require('../controllers/bookController')(bookService, nav);

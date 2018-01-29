@@ -49,9 +49,8 @@ var bookController = function(bookService, nav) {
             var collection = db.collection('books');
             collection.findOne({_id: id},
                 function(err, results) {
-                    console.log(results);
                     if( results.id) {
-                        console.log(results);
+                      console.log(`found: ${results.id}`);
                         bookService.getBookById(results.id, function (err, book) {
                             results.book = book;
                             res.render('bookView', {
